@@ -63,6 +63,9 @@ You can start running SQL command on the terminal.
 
 <h2 id="analytics">Analytics graphs</h2>
 
+<p>Upload-compatible SQL: <a href="answer.md">answer.md</a>. The equivalent repository SQL file is <code>answer.sql</code>.</p>
+<p>Upload-compatible actionable ideas: <a href="actionable_ideas.md">actionable_ideas.md</a>.</p>
+
 <p>Generate the two acceptance-criteria graphs with Python:</p>
 
 <pre><code>python -m pip install matplotlib
