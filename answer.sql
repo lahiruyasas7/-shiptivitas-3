@@ -20,7 +20,15 @@ GROUP BY release_period;
 
 -- PART 2: Create a SQL query that indicates the number of status changes by card
 
-
-
-
+SELECT
+    c.id AS card_id,
+    c.name AS card_name,
+    count(h.id) AS status_change_count
+FROM card AS c
+LEFT JOIN card_change_history AS h
+    ON h.cardID = c.id
+    AND h.oldStatus IS NOT NULL
+    AND h.oldStatus != h.newStatus
+GROUP BY c.id, c.name
+ORDER BY status_change_count DESC, c.id;
 
